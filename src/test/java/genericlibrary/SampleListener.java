@@ -8,6 +8,13 @@ import org.testng.ITestResult;
 
 import com.relevantcodes.extentreports.LogStatus;
 
+/**
+ * 
+ * @author K Themeem
+ * 
+ *         Listener class
+ *
+ */
 public class SampleListener extends CommonLibrary implements ITestListener {
 
 	String screenshotPath = null;

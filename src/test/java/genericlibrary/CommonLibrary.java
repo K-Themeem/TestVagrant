@@ -13,6 +13,13 @@ import org.openqa.selenium.TakesScreenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
+/**
+ * 
+ * @author K Themeem
+ * 
+ *         Common class to accommodate all common operations
+ *
+ */
 public class CommonLibrary extends Base {
 
 	public static ExtentTest logger;
@@ -42,6 +49,13 @@ public class CommonLibrary extends Base {
 
 	public static ExtentReports extent = new ExtentReports(extentReport, true);
 
+	/**
+	 * Method to take and store screenshot
+	 * 
+	 * @param screenshotName
+	 * @return
+	 * @throws IOException
+	 */
 	public static String getScreenshot(String screenshotName) throws IOException {
 		String dateName = new SimpleDateFormat(dateFormat).format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
@@ -52,6 +66,11 @@ public class CommonLibrary extends Base {
 		return destination;
 	}
 
+	/**
+	 * Method to initialize data
+	 * 
+	 * @throws IOException
+	 */
 	public void initData() throws IOException {
 		extent.loadConfig(new File(extentReportFile));
 		chromedriverPath = driverData.getPropertyValue("chromeDriverPath");

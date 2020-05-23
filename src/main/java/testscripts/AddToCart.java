@@ -15,7 +15,16 @@ import objectrepository.ProductDetail;
 import objectrepository.Search;
 import objectrepository.SearchResults;
 
+/**
+ * 
+ * @author K Themeem
+ * 
+ *         Test class
+ *
+ */
 public class AddToCart extends Base {
+	Base base = new Base();
+
 	/**
 	 * @return the test data to be tested
 	 * @throws IOException
@@ -26,8 +35,13 @@ public class AddToCart extends Base {
 				{ CommonLibrary.testData.getPropertyValue("commodityItem2") } };
 	}
 
+	/**
+	 * 
+	 * @param commodityName
+	 * @throws Exception
+	 */
 	@Test(dataProvider = "Add_To_Cart_Data")
-	public void searchAndAddToCart(String commodityName) throws Exception {
+	public static void searchAndAddToCart(String commodityName) throws Exception {
 		Home home = PageFactory.initElements(driver, Home.class);
 		home.gotoSearch();
 		Search search = PageFactory.initElements(driver, Search.class);

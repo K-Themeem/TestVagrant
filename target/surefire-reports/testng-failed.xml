@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TV]" parallel="tests">
+  <listeners>
+    <listener class-name="genericlibrary.SampleListener"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="firefoxAssignment(failed)" parallel="tests">
+    <parameter name="browserName" value="firefox"/>
+    <classes>
+      <class name="testscripts.AddToCart">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="logintoApp"/>
+          <include name="initializeData"/>
+          <include name="closeInputData"/>
+          <include name="logoutFromApp"/>
+          <include name="openBrowser"/>
+          <include name="searchAndAddToCart" invocation-numbers="0"/>
+          <include name="goToMainPage"/>
+        </methods>
+      </class> <!-- testscripts.AddToCart -->
+    </classes>
+  </test> <!-- firefoxAssignment(failed) -->
+</suite> <!-- Failed suite [TV] -->

@@ -4,7 +4,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import genericlibrary.UIInteraction;
-
+/**
+ * 
+ * @author K Themeem
+ * 
+ * Page class for Login class
+ *
+ */
 public class Login {
 	@FindBy(name = "password")
 	private WebElement passwordField;
@@ -26,6 +32,10 @@ public class Login {
 		return enterBtn;
 	}
 
+	/**
+	 * Method to login the app
+	 * @param password
+	 */
 	public void loginToTheApp(String password) {
 		UIInteraction.waitForElement(passwordField);
 		passwordField.sendKeys(password);

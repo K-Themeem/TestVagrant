@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TV" duration-ms="36394" started-at="2020-05-23T13:30:34 IST" finished-at="2020-05-23T13:31:10 IST">
+    <groups>
+    </groups>
+    <test name="chromeAssignment" duration-ms="36394" started-at="2020-05-23T13:30:34 IST" finished-at="2020-05-23T13:31:10 IST">
+      <class name="testscripts.AddToCart">
+        <test-method status="PASS" signature="initializeData()[pri:0, instance:testscripts.AddToCart@80503]" name="initializeData" is-config="true" duration-ms="15" started-at="2020-05-23T13:30:34 IST" finished-at="2020-05-23T13:30:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeData -->
+        <test-method status="PASS" signature="openBrowser(java.lang.String)[pri:0, instance:testscripts.AddToCart@80503]" name="openBrowser" is-config="true" duration-ms="10888" started-at="2020-05-23T13:30:34 IST" finished-at="2020-05-23T13:30:45 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method status="PASS" signature="logintoApp()[pri:0, instance:testscripts.AddToCart@80503]" name="logintoApp" is-config="true" duration-ms="2080" started-at="2020-05-23T13:30:45 IST" finished-at="2020-05-23T13:30:47 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintoApp -->
+        <test-method status="PASS" signature="searchAndAddToCart(java.lang.String)[pri:0, instance:testscripts.AddToCart@80503]" name="searchAndAddToCart" duration-ms="9264" started-at="2020-05-23T13:30:47 IST" data-provider="Add_To_Cart_Data" finished-at="2020-05-23T13:30:56 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Round Neck Shirt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndAddToCart -->
+        <test-method status="PASS" signature="goToMainPage()[pri:0, instance:testscripts.AddToCart@80503]" name="goToMainPage" is-config="true" duration-ms="1529" started-at="2020-05-23T13:30:56 IST" finished-at="2020-05-23T13:30:58 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToMainPage -->
+        <test-method status="PASS" signature="searchAndAddToCart(java.lang.String)[pri:0, instance:testscripts.AddToCart@80503]" name="searchAndAddToCart" duration-ms="7285" started-at="2020-05-23T13:30:58 IST" data-provider="Add_To_Cart_Data" finished-at="2020-05-23T13:31:05 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Round Neck Shirt 16]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchAndAddToCart -->
+        <test-method status="PASS" signature="goToMainPage()[pri:0, instance:testscripts.AddToCart@80503]" name="goToMainPage" is-config="true" duration-ms="848" started-at="2020-05-23T13:31:05 IST" finished-at="2020-05-23T13:31:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToMainPage -->
+        <test-method status="PASS" signature="logoutFromApp()[pri:0, instance:testscripts.AddToCart@80503]" name="logoutFromApp" is-config="true" duration-ms="1" started-at="2020-05-23T13:31:06 IST" finished-at="2020-05-23T13:31:06 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutFromApp -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:testscripts.AddToCart@80503]" name="closeBrowser" is-config="true" duration-ms="4414" started-at="2020-05-23T13:31:06 IST" finished-at="2020-05-23T13:31:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="closeInputData()[pri:0, instance:testscripts.AddToCart@80503]" name="closeInputData" is-config="true" duration-ms="56" started-at="2020-05-23T13:31:10 IST" finished-at="2020-05-23T13:31:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeInputData -->
+      </class> <!-- testscripts.AddToCart -->
+    </test> <!-- chromeAssignment -->
+  </suite> <!-- TV -->
+</testng-results>

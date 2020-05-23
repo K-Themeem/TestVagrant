@@ -6,6 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 
+/**
+ * 
+ * @author K Themeem
+ * 
+ *         Class for Cart page
+ *
+ */
 public class Cart {
 
 	@FindBys({ @FindBy(xpath = "//a[@class=\"cart__product-title\"]") })
@@ -18,6 +25,11 @@ public class Cart {
 		return cartItems;
 	}
 
+	/**
+	 * Method to verify product added to cart
+	 * @param productInCart
+	 * @return
+	 */
 	public boolean verifyCart(String productInCart) {
 		boolean success = false;
 		if (cartItems.get(0).isDisplayed()) {

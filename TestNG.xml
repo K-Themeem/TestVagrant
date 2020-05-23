@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TV" parallel="tests" thread-count="5">
+<suite name="TV" parallel="none" thread-count="5">
 
 	<listeners>
 		<listener class-name="genericlibrary.SampleListener" />
 	</listeners>
-	
+
 	<test name="chromeAssignment">
 		<parameter name="browserName" value="chrome" />
 		<classes>
@@ -13,11 +13,11 @@
 		</classes>
 	</test>
 
-	<!-- <test name="firefoxAssignment"> -->
-	<!-- <parameter name="browserName" value="firefox" /> -->
-	<!-- <classes> -->
-	<!-- <class name="testscripts.AddToCart" /> -->
-	<!-- </classes> -->
-	<!-- </test> -->
+	<!-- <test name="firefoxAssignment">
+		<parameter name="browserName" value="firefox" />
+		<classes>
+			<class name="testscripts.AddToCart" />
+		</classes>
+	</test> -->
 
 </suite> 
