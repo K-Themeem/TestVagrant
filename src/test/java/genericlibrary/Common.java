@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -41,13 +42,13 @@ public class Common extends Base {
 
 	public static ExtentReports extent = new ExtentReports(extentReport, true);
 
-	public static String getScreenshot(String screenshotName) {
+	public static String getScreenshot(String screenshotName) throws IOException {
 		String dateName = new SimpleDateFormat(dateFormat).format(new Date());
 		TakesScreenshot ts = (TakesScreenshot) driver;
 		source = ts.getScreenshotAs(OutputType.FILE);
 		String destination = screenShotPath + screenshotName + nameSeparator + dateName + screenShotType;
-		System.out.println("destination : " + destination);
 		finalDestination = new File(destination);
+		FileUtils.copyFile(source, finalDestination);
 		return destination;
 	}
 

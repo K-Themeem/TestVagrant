@@ -3,10 +3,10 @@ package genericlibrary;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -15,6 +15,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
+
+import objectrepository.Login;
+import objectrepository.Welcome;
 
 /**
  * 
@@ -62,7 +65,10 @@ public class Base {
 	 */
 	@BeforeMethod
 	public void logintoApp(ITestResult result) {
-		System.out.println("Login");
+		Welcome welcome = PageFactory.initElements(driver, Welcome.class);
+		welcome.gotoLoginPage();
+		Login login = PageFactory.initElements(driver, Login.class);
+		login.loginToTheApp(Common.applicationPassword);
 	}
 
 	/**
@@ -73,9 +79,8 @@ public class Base {
 	 */
 	@AfterMethod
 	public void logoutFromApp() throws IOException {
-		FileUtils.copyFile(Common.source, Common.finalDestination);
 		Common.extent.flush();
-		System.out.println("logout");
+		System.out.println("No logout available now");
 	}
 
 	/**

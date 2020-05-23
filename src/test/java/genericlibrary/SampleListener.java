@@ -1,5 +1,7 @@
 package genericlibrary;
 
+import java.io.IOException;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -24,7 +26,11 @@ public class SampleListener extends Common implements ITestListener {
 
 	public void onTestFailure(ITestResult result) {
 		logger = Common.extent.startTest(result.getName());
-		screenshotPath = getScreenshot(result.getName());
+		try {
+			screenshotPath = getScreenshot(result.getName());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		logger.log(LogStatus.FAIL, "Test Case Failed is " + result.getName());
 		logger.log(LogStatus.FAIL, logger.addScreenCapture(userDirectory + fileSeparator + screenshotPath));
 		extent.endTest(Common.logger);
