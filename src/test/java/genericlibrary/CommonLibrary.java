@@ -13,7 +13,7 @@ import org.openqa.selenium.TakesScreenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
-public class Common extends Base {
+public class CommonLibrary extends Base {
 
 	public static ExtentTest logger;
 	public static DriverInputData driverData = new DriverInputData();

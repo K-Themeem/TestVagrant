@@ -9,7 +9,7 @@ import java.util.Properties;
  * Class implements to DataRepository for DriverInpuitData
  *
  */
-public class DriverInputData extends Common implements DataRepository {
+public class DriverInputData extends CommonLibrary implements DataRepository {
 
 	/**
 	 * Method to get value from DriverInput property file of the the given key

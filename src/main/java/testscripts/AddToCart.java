@@ -8,7 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import genericlibrary.Base;
-import genericlibrary.Common;
+import genericlibrary.CommonLibrary;
 import objectrepository.Cart;
 import objectrepository.Home;
 import objectrepository.ProductDetail;
@@ -22,7 +22,8 @@ public class AddToCart extends Base {
 	 */
 	@DataProvider(name = "Add_To_Cart_Data")
 	public Object[][] getData() throws IOException {
-		return new Object[][] { { Common.testData.getPropertyValue("commodityItem1") } };
+		return new Object[][] { { CommonLibrary.testData.getPropertyValue("commodityItem1") },
+				{ CommonLibrary.testData.getPropertyValue("commodityItem2") } };
 	}
 
 	@Test(dataProvider = "Add_To_Cart_Data")

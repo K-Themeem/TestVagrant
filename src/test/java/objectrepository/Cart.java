@@ -1,24 +1,31 @@
 package objectrepository;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 
 public class Cart {
-	@FindBy(xpath = "//a[@class=\"cart__product-title\"]")
-	private WebElement cartItem;
+
+	@FindBys({ @FindBy(xpath = "//a[@class=\"cart__product-title\"]") })
+	private List<WebElement> cartItems;
 
 	/**
-	 * @return the cartItem
+	 * @return the cartItems
 	 */
-	public WebElement getCartItem() {
-		return cartItem;
+	public List<WebElement> getCartItems() {
+		return cartItems;
 	}
 
 	public boolean verifyCart(String productInCart) {
 		boolean success = false;
-		if (cartItem.isDisplayed()) {
-			if (cartItem.getText().equalsIgnoreCase(productInCart)) {
-				success = true;
+		if (cartItems.get(0).isDisplayed()) {
+			for (WebElement cartItem : cartItems) {
+				if (cartItem.getText().trim().equalsIgnoreCase(productInCart.trim())) {
+					success = true;
+					break;
+				}
 			}
 		}
 		return success;

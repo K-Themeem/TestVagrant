@@ -30,7 +30,7 @@ public class SearchResults {
 	public void openProduct(String productName) throws Exception {
 		boolean success = false;
 		for (int i = 0; i < searchResultsName.size(); i++) {
-			if (searchResultsName.get(i).getText().equalsIgnoreCase(productName)) {
+			if (searchResultsName.get(i).getText().trim().equalsIgnoreCase(productName.trim())) {
 				success = true;
 				searchResults.get(i).click();
 				break;

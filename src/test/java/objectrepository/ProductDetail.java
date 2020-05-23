@@ -39,7 +39,7 @@ public class ProductDetail {
 	}
 
 	public String getProductTitle() {
-		return productTitleField.getText();
+		return productTitleField.getText().trim();
 	}
 
 	public void addToCart() {

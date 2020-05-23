@@ -10,7 +10,7 @@ import java.util.Properties;
  *         Class implements to DataRepository for TestData
  *
  */
-public class TestData extends Common implements DataRepository {
+public class TestData extends CommonLibrary implements DataRepository {
 
 	/**
 	 * Method to get value from TestData property file of the the given key
